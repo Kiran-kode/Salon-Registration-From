@@ -1,0 +1,53 @@
+```
+└── 📁src
+    └── 📁assets
+        └── 📁icons
+        └── 📁images
+            ├── TopRatedCard.jpg
+        └── 📁Sign In_files
+            ├── bootstrap.bundle.min.js.download
+            ├── bootstrap.min.css
+            ├── jquery-3.6.0.min.js.download
+            ├── jquery.validate.min.js.download
+            ├── toastr.min.css
+            ├── toastr.min.js.download
+            ├── webStyles.css
+        ├── Hair-And-Care-Men's-Salon-202105121952400.webp
+        ├── react.svg
+        ├── Sign In.html
+    └── 📁Components
+        └── 📁common
+            ├── Footer.jsx
+            ├── Header.jsx
+        └── 📁userPagesComponents
+            └── 📁aboutPagesComponents
+                ├── AboutHero.jsx
+            └── 📁contactPageComponents
+            └── 📁homePageComponents
+                └── 📁CategoriesWithServices
+                    ├── CommonCards.jsx
+                    ├── Friseur.jsx
+                    ├── Kosmetik.jsx
+                    ├── Massage.jsx
+                ├── Category.jsx
+                ├── CategoryCard.jsx
+                ├── Hero.jsx
+                ├── TopRated.jsx
+                ├── TopRatedCard.jsx
+                ├── WebApp.jsx
+    └── 📁data
+        ├── index.js
+    └── 📁pages
+        └── 📁adminPages
+        └── 📁SalonPages
+        └── 📁userPages
+            ├── AboutPage.jsx
+            ├── ContactPage.jsx
+            ├── HomePage.jsx
+            ├── Login.jsx
+            ├── ServicesPage.jsx
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    └── main.jsx
+```
