@@ -35,8 +35,6 @@ const Step5 = ({ onPrev, canGoPrev }) => {
 
         e.target.value = '';
     };
-
-
     const onSubmit = () => {
         const filledBoxes = uploadedImages.filter(img => img !== null);
         
@@ -60,16 +58,10 @@ const Step5 = ({ onPrev, canGoPrev }) => {
         <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col mt-4 space-y-3">
             
             <h1 className="font-semibold text-xl text-gray-700">Upload minimum 3 images of Your Salon</h1>
-            
-
-           
             <div className="flex flex-wrap gap-3 justify-center">
-
                 {Array.from({ length: 6 }).map((_, index) => (
                     <div key={index} className="relative">
-                        
-                        <div className="w-40 h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:border-cyan-500 hover:bg-cyan-50 transition-colors">
-                            
+                        <div className="w-40 h-32 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center cursor-pointer hover:border-cyan-500 hover:bg-cyan-50 transition-colors">  
                             {uploadedImages[index] ? (
                                 <>
                                     <img
@@ -94,7 +86,6 @@ const Step5 = ({ onPrev, canGoPrev }) => {
                     </div>
                 ))}
             </div>
-
             <div className="flex justify-between gap-3 mt-4">
                 <button
                     type="button"

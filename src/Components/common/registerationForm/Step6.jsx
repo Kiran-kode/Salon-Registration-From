@@ -18,9 +18,7 @@ const Step6 = ({ onPrev, canGoPrev }) => {
     } = useForm({
         defaultValues: bankingDetails
     });
-
     const accountNumber = watch("accountNumber");
-
     useEffect(() => {
         Object.keys(bankingDetails).forEach(key => {
             if (bankingDetails[key] && key !== 'canceledChequePhoto') {
@@ -28,12 +26,9 @@ const Step6 = ({ onPrev, canGoPrev }) => {
             }
         });
     }, [bankingDetails, setValue]);
-
     const handleChequeUpload = (e) => {
         const file = e.target.files[0];
         if (!file) return;
-
-       
         if (file.type.startsWith('image/')) {
             const preview = URL.createObjectURL(file);
             setChequePreview(preview);
@@ -52,14 +47,12 @@ const Step6 = ({ onPrev, canGoPrev }) => {
             fileInputRef.current.value = '';
         }
     };
-
     const onSubmit = (data) => {
         console.log("Step 6 Data:", data);
 
         dispatch(updateBankingDetails(data));
         dispatch(nextStep());
     };
-
     return (
         <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col mt-4 space-y-3">
             <div>
@@ -188,8 +181,8 @@ const Step6 = ({ onPrev, canGoPrev }) => {
                     onClick={onPrev}
                     disabled={!canGoPrev}
                     className={`py-3 px-5 rounded-xl font-medium transition-colors ${!canGoPrev
-                            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                            : 'bg-gray-500 text-white hover:bg-gray-600'
+                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                        : 'bg-gray-500 text-white hover:bg-gray-600'
                         }`}
                 >
                     Previous

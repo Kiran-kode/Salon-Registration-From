@@ -8,14 +8,11 @@ const HairService = () => {
         console.log('Service booked!')
     }
     const hairServices = servicesData.filter(service => service.category === "hair")
-
     return (
         <>
-            <Header/>
             <CommonHero title="Friseur Services" />
             {hairServices.map((service, index) => (
                 <SalonServiceCard
-
                     key={index}
                     title={service.title}
                     barber={service.barber}
@@ -30,7 +27,6 @@ const HairService = () => {
                     distance="2.3km"
                 />
             ))}
-            <Footer/>
         </>
     )
 }

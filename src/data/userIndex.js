@@ -1,3 +1,42 @@
+ export const slides = [
+    {
+      image: 'https://salonbizsoftware.com/wp-content/uploads/2024/02/Stylists-doing-hair-at-salon-stations.jpg',
+      simpleText: 'RELAX & REJUNVATE',
+      heading: 'CutXpress Day Package',
+      paragraph: 'Unwind with a day of luxury spa treatment  designed to soothe your mind and body',
+      price: '$120',
+      buttonText: 'Book Now',
+      alignment: 'left', 
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Fsb258ZW58MHx8MHx8fDA%3D',
+      simpleText: 'RELAX & REJUNVATE',
+      heading: 'CutXpress Day Package',
+      paragraph: 'Unwind with a day of luxury spa treatment designed to soothe your mind and body',
+      price: '$120',
+      buttonText: 'Book Now',
+      alignment: 'center', // Slide 2: Center-aligned
+    },
+    {
+      image: 'https://www.andacademy.com/resources/wp-content/uploads/2024/11/feature-image-12.webp',
+      simpleText: 'RELAX & REJUNVATE',
+      heading: 'CutXpress Day Package',
+      paragraph: 'Unwind with a day of luxury spa treatment  designed to soothe your mind and body',
+      price: '$120',
+      buttonText: 'Book Now',
+      alignment: 'left', // Slide 3: Left-aligned
+    },
+    {
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcm2FRYAJIzw20w5FvYxLI5lfYyUiREExNiQ&s',
+      simpleText: 'RELAX & REJUNVATE',
+      heading: 'CutXpress Day Package',
+      paragraph: 'Unwind with a day of luxury spa treatment  designed to soothe your mind and body',
+      price: '$120',
+      buttonText: 'Book Now',
+      alignment: 'center', // Slide 4: Center-aligned
+    },
+  ];
+
 export const categories = [
     { title: "Tattoo", Link: "" },
     { title: "Kosmetik", Link: "" },
@@ -27,20 +66,15 @@ export const FriseurCards =  [
     {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
     {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
     {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"}, 
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"}, ]
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", },{heading: "Heading", subHeading: "SubHeading", para: "This is Para"} ]
 
     export const TopRatedCards = [
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"},
-    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", heading:"Heading", subHeading:"SubHeading", para:"This is Para"}
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", name:"Name", location:"Location", distance:"Distance"},
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", name:"Name", location:"Location", distance:"Distance"},
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", name:"Name", location:"Location", distance:"Distance"},
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", name:"Name", location:"Location", distance:"Distance"},
+    {img:"https://img.freepik.com/free-photo/man-barbershop-salon-doing-haircut-beard-trim_1303-20953.jpg?semt=ais_hybrid&w=740", name:"Name", location:"Location", distance:"Distance"},
 ]
-
 
 export const salonImages = [
     {
@@ -61,8 +95,6 @@ export const salonImages = [
     },
 
 ]
-
-
 
     // SalonservicesData.js
 export const servicesData = [
@@ -116,7 +148,4 @@ export const servicesData = [
     buttonText: "Book Now"
   }
 ]
-
-
-
-
+ 

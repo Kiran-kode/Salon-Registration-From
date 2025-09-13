@@ -1,18 +1,11 @@
 import React from 'react'
 import { servicesData } from '../../../data/userIndex'
 import SalonServiceCard from './cardTemplate/SalonServiceCard'
-import Header from '../../common/Header'
 import CommonHero from '../../common/CommonHero'
-import Footer from '../../common/Footer'
-
-
 const BeautyService = () => {
     const beautyServices = servicesData.filter((service => service.category === "beauty"))
   return (
    <>
-
-    {/* {beautyServices.forEach(service => <SalonServiceCard key={service.id} {...service}/>)} */}
-<Header/>
 <CommonHero title="Beauty Services" />
 {beautyServices.map((service, index) => (
     <SalonServiceCard
@@ -31,7 +24,6 @@ const BeautyService = () => {
     distance={service.distance}
     />
 ))}
-<Footer/>
    </>
   )
 }

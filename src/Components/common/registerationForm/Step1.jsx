@@ -23,10 +23,10 @@ const Step1 = ({ onPrev, canGoPrev }) => {
     }, [personalInfo, setValue]);
 
     const onSubmit = (data) => {
-        
+
         dispatch(updatePersonalInfo(data));
         console.log(data);
-        
+
         dispatch(nextStep());
     };
 
@@ -54,7 +54,7 @@ const Step1 = ({ onPrev, canGoPrev }) => {
                 <input
                     type="email"
                     placeholder="Enter Owner Email"
-                    {...register("ownerEmail", { 
+                    {...register("ownerEmail", {
                         required: "Email is required",
                         pattern: {
                             value: /^\S+@\S+$/i,
@@ -136,11 +136,10 @@ const Step1 = ({ onPrev, canGoPrev }) => {
                     type="button"
                     onClick={onPrev}
                     disabled={!canGoPrev}
-                    className={`py-3 px-5 rounded-xl font-medium transition-colors ${
-                        !canGoPrev 
-                            ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                    className={`py-3 px-5 rounded-xl font-medium transition-colors ${!canGoPrev
+                            ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                             : 'bg-gray-500 text-white hover:bg-gray-600'
-                    }`}
+                        }`}
                 >
                     Previous
                 </button>

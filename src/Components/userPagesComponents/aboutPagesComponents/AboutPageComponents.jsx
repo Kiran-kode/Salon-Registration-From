@@ -1,27 +1,16 @@
 import React from 'react';
-import Header from '../../common/Header';
 import { IoDiamondOutline } from "react-icons/io5";
 import { RiPokerDiamondsFill } from "react-icons/ri";
 import { CiBellOn } from "react-icons/ci";
 import { GiWineGlass } from "react-icons/gi";
-import Footer from '../../common/Footer';
 import Carousel from './EmblaCarousel/Carousel';
 import Button from '../../common/Button';
 import CommonHero from '../../common/CommonHero';
 
 const AboutPageComponents = () => {
   return (
-    <>
       <div className="w-full min-h-screen">
-        <Header />
-
-        {/* Hero Section - Mobile centered, md+ same as lg */}
-        {/* <CommonHero title="About Us" imageUrl="https://media.istockphoto.com/id/1856117770/photo/modern-beauty-salon.jpg?s=612x612&w=0&k=20&c=dVZtsePk2pgbqDXwVkMm-yIw5imnZ2rnkAruR7zf8EA=" /> */}
-
-
         <CommonHero title="About Us" imageUrl="https://media.istockphoto.com/id/1856117770/photo/modern-beauty-salon.jpg?s=612x612&w=0&k=20&c=dVZtsePk2pgbqDXwVkMm-yIw5imnZ2rnkAruR7zf8EA=" />
-
-
         <section className="about-story w-full">
           <div className="bg-yellow-900 ">
             <div className="w-full md:px-0  sm:px-6 ">
@@ -42,7 +31,7 @@ const AboutPageComponents = () => {
                       Robert Anderson
                       <small className="block text-sm text-gray-300">Ceo</small>
                     </h3>
-                   
+
                     {/* <div className=' sm:hidden md:block h-10 w-10 color-white bg-[#333333] absolute bottom-[50%] left-135 rotate-45 '></div> */}
                   </div>
                 </div>
@@ -50,7 +39,7 @@ const AboutPageComponents = () => {
                 {/* Right Side */}
                 <div className="sm:col-start-2 md:h-full">
                   <article className="bg-[#333333] text-white h-full shadow-md p-6 sm:p-8 ">
-                    <header>  
+                    <header>
                       <h2 className="text-3xl font-bold mb-4">Our Short Story</h2>
                       <h3 className="about-story__name sm:hidden text-lg font-medium mb-2">
                         Robert Anderson
@@ -96,16 +85,6 @@ const AboutPageComponents = () => {
             </div>
           </div>
         </section>
-
-
-
-
-
-
-
-
-
-
         {/* Services Cards Section - Mobile centered, md+ same as lg */}
         <section className='w-full px-4 md:px-6 lg:px-8 py-8 md:py-16'>
           <div className='max-w-7xl mx-auto'>
@@ -165,7 +144,6 @@ const AboutPageComponents = () => {
                   <Button>Learn More</Button>
                 </div>
               </div>
-
               {/* Carousel Content */}
               <div className='w-full md:w-1/2 lg:w-1/2'>
                 <Carousel />
@@ -173,10 +151,7 @@ const AboutPageComponents = () => {
             </div>
           </div>
         </section>
-
-        <Footer />
       </div>
-    </>
   );
 };
 

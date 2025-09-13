@@ -83,7 +83,7 @@ const registrationSlice = createSlice({
       state.selectedDay = '';
     },
 
-     // Form Data Updates]
+     // Form Data Updates
     updatePersonalInfo: (state, action) => {
       state.personalInfo = { ...state.personalInfo, ...action.payload };
     },

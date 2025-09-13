@@ -53,8 +53,7 @@ const Step4 = ({ onPrev, canGoPrev }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col mt-4 space-y-4">
-            
+        <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col mt-4 space-y-4"> 
             <div>
                 <h2 className="font-semibold text-xl  text-gray-600 mb-3">Categories You Serve</h2>
                 

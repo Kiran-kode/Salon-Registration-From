@@ -10,20 +10,16 @@ const EmblaCarousel = (props) => {
   const onNavButtonClick = useCallback((emblaApi) => {
     const autoplay = emblaApi?.plugins()?.autoplay
     if (!autoplay) return
-
     const resetOrStop =
       autoplay.options.stopOnInteraction === false
         ? autoplay.reset
         : autoplay.stop
-
     resetOrStop()
   }, [])
-
   const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
     emblaApi,
     onNavButtonClick
   )
-
   return (
     <section className="max-w-4xl mx-auto ">
       <div className="overflow-hidden rounded-lg shadow-lg" ref={emblaRef}>
@@ -38,18 +34,16 @@ const EmblaCarousel = (props) => {
           ))}
         </div>
       </div>
-
       <div className="flex justify-center mt-6">
         <div className="flex space-x-2">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`w-3 h-3 rotate-[45deg] transition-all duration-300 ${
-                index === selectedIndex 
-                  ? 'bg-cyan-800 scale-125' 
+              className={`w-3 h-3 rotate-[45deg] transition-all duration-300 ${index === selectedIndex
+                  ? 'bg-cyan-800 scale-125'
                   : 'bg-gray-300 hover:bg-gray-400'
-              }`}
+                }`}
             />
           ))}
         </div>

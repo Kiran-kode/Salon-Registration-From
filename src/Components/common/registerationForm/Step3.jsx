@@ -2,28 +2,28 @@ import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { useSelector, useDispatch } from 'react-redux'
 import {
-     updateAvailability,
-      nextStep,
-      addTimeSlot,
-      removeTimeSlot,
-      openModal,
-      closeModal,
-       } from '../../../redux/RegistrationSlice'
+    updateAvailability,
+    nextStep,
+    addTimeSlot,
+    removeTimeSlot,
+    openModal,
+    closeModal,
+} from '../../../redux/RegistrationSlice'
 
 import TimeSlotModal from './TimeSlotModal'
 
-const Step3 = ({onPrev, canGoPrev}) => {
+const Step3 = ({ onPrev, canGoPrev }) => {
     const dispatch = useDispatch();
-    const {availability, isModalOpen, selectedDay} = useSelector(state => state.registration)
+    const { availability, isModalOpen, selectedDay } = useSelector(state => state.registration)
 
     const {
         register,
         handleSubmit,
-        formState: {errors},
+        formState: { errors },
         setValue
     } = useForm({
-        defaultValues:{
-             mondayFridayStart: availability.mondayFridayStart,
+        defaultValues: {
+            mondayFridayStart: availability.mondayFridayStart,
             mondayFridayEnd: availability.mondayFridayEnd,
             saturdayStart: availability.saturdayStart,
             saturdayEnd: availability.saturdayEnd
@@ -36,7 +36,7 @@ const Step3 = ({onPrev, canGoPrev}) => {
         })
     }, [availability.timeSlots, setValue])
 
-   const onSubmit = (data) => {
+    const onSubmit = (data) => {
         console.log("Step 3 data: ", data);
         dispatch(updateAvailability(data));
         dispatch(nextStep())
@@ -51,17 +51,17 @@ const Step3 = ({onPrev, canGoPrev}) => {
     }
 
     const handleAddTimeSlot = (data) => {
-        console.log("Adding time slot:", data); // ✅ Debug log
+        console.log("Adding time slot:", data);
         const newSlot = {
             startTime: data.startTime,
-            maxBookings: parseInt(data.slotLimit) || 1 // ✅ Convert to number
+            maxBookings: parseInt(data.slotLimit) || 1 // Convert to number
         };
-        dispatch(addTimeSlot({day: selectedDay, slot: newSlot}));
+        dispatch(addTimeSlot({ day: selectedDay, slot: newSlot }));
         dispatch(closeModal())
     };
 
     const handleRemoveSlot = (day, index) => {
-        dispatch(removeTimeSlot({ day, index}))
+        dispatch(removeTimeSlot({ day, index }))
     }
 
     return (
@@ -133,9 +133,9 @@ const Step3 = ({onPrev, canGoPrev}) => {
                 </div>
 
                 {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map((day) => (
-                    <input 
+                    <input
                         key={`${day}-slots`}
-                        type="hidden" 
+                        type="hidden"
                         {...register(`timeSlots.${day}`)}
                     />
                 ))}
@@ -160,10 +160,10 @@ const Step3 = ({onPrev, canGoPrev}) => {
                                         <div key={index} className="flex items-center justify-between bg-white p-2 rounded  ">
                                             <div className="flex ">
                                                 <span className="text-xs text-gray-500">
-                                                    Time {slot.startTime}, 
+                                                    Time {slot.startTime},
                                                 </span>
                                                 <span className="text-xs text-gray-500">
-                                                     Limit {slot.maxBookings} 
+                                                    Limit {slot.maxBookings}
                                                 </span>
                                             </div>
                                             <button
@@ -185,19 +185,18 @@ const Step3 = ({onPrev, canGoPrev}) => {
 
                 <div className="flex justify-between gap-3 mt-4">
                     <button
-                        type="button" 
+                        type="button"
                         onClick={onPrev}
                         disabled={!canGoPrev}
-                        className={`py-3 px-5 rounded-xl font-medium transition-colors ${
-                            !canGoPrev 
-                                ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
+                        className={`py-3 px-5 rounded-xl font-medium transition-colors ${!canGoPrev
+                                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                                 : 'bg-gray-500 text-white hover:bg-gray-600'
-                        }`}
+                            }`}
                     >
                         Previous
                     </button>
                     <button
-                        type="submit" 
+                        type="submit"
                         className="bg-cyan-800 text-white py-3 px-5 rounded-xl font-medium hover:bg-cyan-900 transition-colors"
                     >
                         Next

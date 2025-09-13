@@ -2,7 +2,6 @@ import React from 'react'
 
 const WebApp = () => {
   return (
-    <>
       <div className='sm:flex sm:w-full sm:mx-5 sm:justify-center  md:h-90 bg-[#e6e6e6]  md:flex  md:mx-15 mb-5 md:w-[90%]'>
         <div className='md:w-[50%] flex flex-col justify-center items-center md:gap-6 '>
           <h2 className='font-semibold text-2xl'>CutXpress Web App</h2>
@@ -16,7 +15,6 @@ const WebApp = () => {
           <img src="https://cutxpress.life/asset/image/unnamed.webp" className='h-90 w-90 object-contain' alt="" />
         </div>
       </div>
-    </>
   )
 }
 

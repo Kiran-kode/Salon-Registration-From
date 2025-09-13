@@ -32,7 +32,6 @@ dispatch(nextStep())
     }
 
   return (
-   <>
    <form onSubmit={handleSubmit(onSubmit)} className="w-full flex flex-col mt-4 space-y-3">
             <h1 className="font-semibold text-gray-600">Contact Information</h1>
 
@@ -131,7 +130,6 @@ dispatch(nextStep())
                 </button>
             </div>
         </form>
-   </>
   )
 }
 
