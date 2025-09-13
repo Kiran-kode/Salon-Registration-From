@@ -3,8 +3,6 @@ import CommonTable from "./CommonTable";
 import { servicesTableData } from '../../../data/adminIndex';
 import Toggle from './Toggle';
 import ActionsButton from '../common/ActionsButton';
-import Label from '../common/Label';
-
 const servicesTableColumns = [
 
   { header: "Number", accessor: "number" },
@@ -31,7 +29,6 @@ const servicesTableColumns = [
         <button className={`bg-${row.gender === "Male" ? "blue" : "red"}-500 font-semibold text-white px-3 py-1 rounded-xl text-xs hover:bg-blue-300 transition-colors`}>
           {row.gender}
         </button>
-       
       </div>
       ),},
   {
@@ -50,15 +47,12 @@ const servicesTableColumns = [
         <Toggle/>
       </div>
     ),},
-
-
   {
     header: "Actions",
     render: (row) => (
       <ActionsButton btn1="View" btn2="Delete" />
     ),
-  },
-  
+  }, 
 ];
 function ServicesTable() {
   return (
@@ -71,5 +65,4 @@ function ServicesTable() {
     </div>
   );
 }
-
 export default ServicesTable;

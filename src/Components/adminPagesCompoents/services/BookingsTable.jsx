@@ -7,14 +7,11 @@ import Label from '../common/Label';
 
 const bookingsTableColumns = [
      { header: "Booking Number", accessor: "bookingId" },
-
     { header: "User", accessor: "user", 
          render: (row) => (
-      
         <button className="bg-cyan-700 font-semibold text-white px-3 py-1 rounded-xl text-xs hover:bg-cyan-800  transition-colors">
           {row.user}
         </button>
-      
     ),
      },
     { header: "Salon", accessor: "salon",
@@ -48,7 +45,6 @@ const bookingsTableColumns = [
         </button>
             ),
   },
-  
 ];
 function BookingsTable() {
   return (

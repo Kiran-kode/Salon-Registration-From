@@ -7,17 +7,11 @@ import { useNavigate } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import Button from './Button';
-
-
-
 const Header = () => {
- 
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu toggle
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <>
       <div className="w-full h-20 flex items-center px-4 justify-between border-b border-gray-400 md:px-4 md:flex md:items-center md:justify-between">
@@ -28,7 +22,6 @@ const Header = () => {
             alt="Logo"
           />
         </div>
-
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}

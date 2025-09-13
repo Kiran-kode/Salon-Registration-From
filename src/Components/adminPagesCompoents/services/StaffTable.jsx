@@ -1,12 +1,9 @@
 import React from 'react';
 import CommonTable from "./CommonTable";
 import { staffTableData } from '../../../data/adminIndex';
-import { IoToggle } from "react-icons/io5";
-import { useState } from 'react';
 import Toggle from './Toggle';
 import { FaStar } from "react-icons/fa";
 import Label from '../common/Label';
-
 const usersColumns = [
   { 
     header: "Photo", 
@@ -42,7 +39,6 @@ className="w-12 h-12 rounded object-cover border"/>
     ),
   },
   { header: "Bookings", accessor: "Bookings" },
-  
   {
     header: "Actions",
     render: (row) => (
@@ -55,11 +51,7 @@ className="w-12 h-12 rounded object-cover border"/>
     ),
   },
 ];
-
-
-
 function StaffTable() {
-      
   return (
     <div className="w-full">
       <CommonTable 

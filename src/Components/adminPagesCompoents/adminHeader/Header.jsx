@@ -1,6 +1,5 @@
 import React from 'react';
 import Hamburger from 'hamburger-react';
-
 const Header = ({ isOpen, setOpen }) => {
   return (
     <section className='header w-full h-16 bg-white shadow-lg  top-0 z-0 '>

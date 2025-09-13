@@ -25,9 +25,6 @@ const usersColumns = [
     ),
   },
 ];
-
-
-
 function UsersTable() {
   return (
     <div className="w-full">

@@ -1,15 +1,5 @@
 import React from 'react'
-import { IoToggle } from "react-icons/io5";
-import { useState } from 'react';
-import { FaToggleOff } from "react-icons/fa";
-
 const CommonTable = ({ columns, data, title = "Table"  }) => {
-    
-        
-    const [On, setOn] = useState(false)
-            const handleToggle = () => {
-                setOn(prev => !prev);
-            }
   return (
     <section className='w-full bg-white rounded-lg shadow-sm border border-gray-200 p-4 '>
       {/* Header Section */}
@@ -34,7 +24,6 @@ const CommonTable = ({ columns, data, title = "Table"  }) => {
           </button>
         </div>
       </div>
-
       <div className="overflow-x-auto rounded-xl mt-4 ">
         <table className="w-full min-w-full table-auto">
           <thead className="bg-gray-50 ">

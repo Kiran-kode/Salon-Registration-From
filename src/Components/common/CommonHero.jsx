@@ -1,5 +1,4 @@
 import React from 'react'
-
 const CommonHero = (props) => {
   const { title, imageUrl } = props
   return (

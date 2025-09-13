@@ -17,7 +17,6 @@ const salonTableColumns = [
   { header: "Top Rated", accessor: "topRated" },
   { header: "Contact", accessor: "contact" },
   { header: "Owner", accessor: "owner" },
-  
   {
     header: "Actions",
     render: (row) => (
@@ -38,5 +37,4 @@ function SalonsTable() {
     </div>
   );
 }
-
 export default SalonsTable;
